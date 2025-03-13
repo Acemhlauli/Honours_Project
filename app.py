@@ -29,13 +29,12 @@ on = st.toggle("Activate feature")
 placeholder = st.empty()
 
 if on:
-    st.write("Feature activated! Starting the animation...")
-    
-    # Start the animation
-    ani = animate_graph()
+    st.write("Feature activated! Starting the animation...")  
     
     # Use Streamlit's placeholder to update the plot
     for _ in range(100):
+         # Start the animation
+        ani = animate_graph()
         placeholder.pyplot(ani._fig)
     
     # Display the plot
